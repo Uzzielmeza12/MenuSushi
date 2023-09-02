@@ -1,0 +1,118 @@
+*{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    max-width: 1200px; /*con esto pone el ancho de la pantalla al maximo*/
+    background-color: coral;
+    border: 10px outset;
+    opacity: 1.2;/*para poner opaca la imagen de fondo */
+    background-image: url("https://us.123rf.com/450wm/happyvector071/happyvector0711810/happyvector071181000023/110608792-ilustraci%C3%B3n-de-vector-creativo-de-palillos-con-trozos-de-salm%C3%B3n-sushi-rollo-aislado-sobre-fondo.jpg?ver=6");/*poner imagen de fondo con el menu*/
+    background-size:175px 175px;
+    padding: 30px;
+    margin: 0 auto; /*con el margin pone un margen para que no quede todo pegado a un esquina lo puede poner en el centro o donde tu quieras*/
+}
+
+.hero{
+    display:flex;/*con esta funcion pones la letra de lado izquierdo de la imagen o derecho depende*/
+    grid-template-columns: 1fr 2fr;
+}
+.hero h1{
+text-align: center;
+font-size: 85px;
+color: rgb(176, 74, 37);
+
+}
+.hero-image {
+    margin: 0;/*el margin es un para darle espacio*/
+}
+
+
+.hero-image img{
+    width: 500px;
+    border:10px solid rgb(156, 133, 79);
+    border-radius: 45px;
+    object-fit:contain
+}
+
+.hero p{
+    display:inline;
+    font-family:fantasy;
+    color:  rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.services h2{
+
+    text-align: center;
+    color:  rgb(0, 0, 0);
+}
+.dishes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(207px,1fr));
+    /* Repeat, representa un fragmento repetido*/
+    grid-template-rows: repeat(2, minmax(150px,1fr));
+    /*Minmax, ayuda a declarar el tamaño minimo y maxino para ancho y alto de la celda*/
+    column-gap: 25px;/*separa las columnas del medio hacia afuera*/
+    row-gap: 25px;/*separa las columnas de de arriba hacia abajo*/
+}
+
+.dishes-image img{
+    width: 100%;
+    height: 100%;
+    border:10px solid rgb(156, 133, 79);
+    border-radius: 50px;
+    object-fit: cover;/*hacia mas amplia la imagen*/
+}
+
+
+.dishes-image-big{
+   
+    grid-area: 1 / 1 / 3 / 3;
+    
+}
+
+.plates{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); 
+    /*Auto-fit ensancha las columnas para que ocupen todo el contenedor */
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.plates-image{
+    background-color: rgb(159, 115, 115);
+    border-radius: 30px;
+    transition-duration: 1000ms;
+}
+
+.menu h2{
+    text-align: center;
+    color:  rgb(0, 0, 0);
+}
+
+.plates-image:hover{
+    background-color:black
+}
+.plates-image img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 100px;
+}
+
+
+.boton{
+background-color: rgb(255, 0, 38);
+font-size: 30px;
+color: burlywood;
+border: 10px double rgb(156, 133, 79);;
+border-radius: 30px;
+cursor: pointer;
+}
+
+.boton:hover{
+background-color: antiquewhite;
+}
